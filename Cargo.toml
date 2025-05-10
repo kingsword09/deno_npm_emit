@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = [
+  "rs-lib",
+  "wasm"
+]
+
+[workspace.dependencies]
+deno_npm = "^0.33.0"
+deno_npm_cache = "^0.23.0"
+
+[profile.release]
+codegen-units = 1
+incremental = true
+lto = true
+opt-level = "z"
